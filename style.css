@@ -252,6 +252,35 @@ p {
 	position: relative;
 	z-index: 1;
 
+}#hero3 {
+	background-image: url(./images/digitalization.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+	
+
+}
+#hero4 {
+	background-image: url(./images/activity2.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#hero5 {
+	background-image: url(./images/wind.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#hero6 {
+	background-image: url(./images/activity4.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
 }
 #hero1 h1{
 	font-size: 20px;
@@ -262,6 +291,37 @@ p {
 	font-size: 20px;
 	text-align: left;
 	color: black;
+}
+#hero3 h1{
+	font-size: 20px;
+	text-align: left;
+	color: white;
+}
+#hero4 h1{
+	font-size: 20px;
+	text-align: left;
+	color: white;
+}
+#hero5 h1{
+	font-size: 20px;
+	text-align: left;
+	color: white;
+}
+#hero6 h1{
+	font-size: 20px;
+	text-align: left;
+	color: white;
+}
+#wrapper{
+	padding: 0px 30px;
+}
+#wrapper h3{
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+ li{
+	font-size: 14px;	
 }
 #hero::after {
 	content: '';
@@ -554,6 +614,7 @@ p {
 }
 /* End Footer */
 
+
 /* Keyframes */
 @keyframes hamburger_puls {
 	0% {
@@ -586,21 +647,24 @@ p {
 		font-weight: 500;
 	}
 }
-/* End Keyframes */
+/* End Keyframes */	
 @media only screen and (max-width: 767px) {
-
+	#wrapper img{
+		width: 100px;
+	}
+	.services{
+	}
 	#contact{
 		margin-top: 200px;
 	}
 	#services{
-		margin-top: -330px;
+		margin-top: -210px;
 		margin-bottom: -300px;
 	}
 	.service-top{
-
 	}
 	#projects{
-		margin-top: -450px;
+		margin-top: -290px;
 	}
 }
 /* Media Query For Tablet */
