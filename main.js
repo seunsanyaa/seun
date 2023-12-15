@@ -23,16 +23,27 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
-function sendEmail(){
-    Email.send({
-        SecureToken:"1e0334dd-0770-4ac6-b699-df901de8a9d",
-        To : 'taonuga@gmail.com.gmail.com',
-        From : document.getElementById("email").value,
-        Subject : "New Contact Form Enquiry",
-        Body : "Name:"+ document.getElementById("name").value
-               +"<br> Email:" + document.getElementById("email").value
-               +"<br> Message:" + document.getElementById("message").value
-    }).then(
-      message => alert("Message Sent Successfully")
-    );
-}
+
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyBgElements = document.querySelectorAll(".lazy-bg");
+
+    if ("IntersectionObserver" in window) {
+        let lazyBgObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundImage = "url(" + entry.target.dataset.src + ")";
+                    lazyBgObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        lazyBgElements.forEach(function(element) {
+            lazyBgObserver.observe(element);
+        });
+    } else {
+        // Fallback for browsers that don't support Intersection Observer
+        lazyBgElements.forEach(function(element) {
+            element.style.backgroundImage = "url(" + element.dataset.src + ")";
+        });
+    }
+});
